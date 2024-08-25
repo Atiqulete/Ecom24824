@@ -1,0 +1,26 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <div class="col-11 col-md-5 max-auto mt-5">
+        <div>
+            <img src="{{user.profile.image.url}}" style="height: 300px; width: 350px; " alt="">
+        </div>
+        <div class="card-body">
+            <p>{{ user.username }}</p>
+            <p>{{ user.first_name }}</p>
+            <p>{{ user.last_name }}</p>
+            <p>{{ user.email }}</p>
+            <p>{{ user.profile.phone }}</p>
+            <p>{{ user.profile.Date_of_Birth }}</p>
+
+            <a href="{% url 'profileupdate-page' %}">Update</a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+
