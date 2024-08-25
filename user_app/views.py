@@ -1,10 +1,8 @@
 # Create your register page here.
-from django.shortcuts import render,redirect
-from user_app.forms import RegisterForm
-from django.contrib.auth import authenticate, login as auth_login
 from django.shortcuts import render, redirect, HttpResponse
+from user_app.forms import RegisterForm,UserUpdate,ProfileUpdate
+from django.contrib.auth import authenticate, login as auth_login
 from django.contrib.auth import logout
-from user_app.forms import *
 from django.contrib import messages
 
 # Create your register code here.
