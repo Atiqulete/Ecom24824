@@ -39,9 +39,6 @@
 </head>
 
 <body>
-
-
-
     <div class="page-wrapper">
         <header class="header header-intro-clearance header-4">
             <div class="header-top">
@@ -91,14 +88,17 @@
                                         <div class="dropdown-menu">
                                             {% if user.is_authenticated %}
                                             <ul>
-                                                <li><a class="dropdown-item" href="{% url 'logout_view' %}"><span> Logout </span> </a></li>
+                                                <li><a class="dropdown-item" href="{% url 'logout_view' %}"><span>
+                                                            Logout </span> </a></li>
                                             </ul>
-                                            
+
                                             {% else %}
                                             <ul>
                                                 <li>
-                                                    <a class="dropdown-item" href="{% url 'login_page' %}"><span> Singin</span> </a>
-                                                    <a class="dropdown-item" href="{% url 'register' %}"><span> Singup </span></a>
+                                                    <a class="dropdown-item" href="{% url 'login_page' %}"><span>
+                                                            Singin</span> </a>
+                                                    <a class="dropdown-item" href="{% url 'register' %}"><span> Singup
+                                                        </span></a>
                                                 </li>
 
                                             </ul>
