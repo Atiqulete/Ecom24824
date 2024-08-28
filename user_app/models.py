@@ -16,7 +16,7 @@ class RegisterForm(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='profileImage',default='profileImage/noimg.png')
+    image = models.ImageField(upload_to='profileImage',default='profileImage/noprofile.png')
     phone = models.CharField(max_length=14,blank=True,null=True)
     date_of_birth = models.DateField(blank=True,null=True)
 
