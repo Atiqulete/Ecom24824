@@ -37,6 +37,9 @@ def pro_deta(request,pk):
     }
     return render(request,'website/product.html',context)
 
+def about(request):
+    return render(request,'website/about.html')
+
 
 
 

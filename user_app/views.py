@@ -23,7 +23,7 @@ def login_page(request):
         user = authenticate(request, username=username, password=pass1)
         if user is not None:
             auth_login(request, user)
-            return redirect('/#')
+            return redirect('profile')
         else:
             context = {
                'error_message' : 'username or password is incorrect!!!',
