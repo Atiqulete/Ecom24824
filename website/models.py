@@ -26,8 +26,8 @@ class Banner(models.Model):
     class Meta:
         verbose_name_plural =("Banner")
 
-    def _str_(self):
-        return self.name
+    def __str__(self):
+        return self.name_Promotions
 
 class Category(models.Model):
     name = models.CharField(max_length=50, null=False)
@@ -35,7 +35,7 @@ class Category(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def _str_(self):
+    def __str__(self):
         return self.name 
 
 class Brand(models.Model):
@@ -47,7 +47,7 @@ class Brand(models.Model):
     class Meta:
         verbose_name_plural = 'Brands'
 
-    def _str_(self):
+    def __str__(self):
         return self.name
 
 class Product(models.Model):
@@ -64,5 +64,5 @@ class Product(models.Model):
     class Meta:
         verbose_name_plural =("Products")
 
-    def _str_(self):
+    def __str__(self):
         return self.name 
